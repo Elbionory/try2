@@ -201,8 +201,8 @@ main {
       height: 25vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap:1.5em;
+      justify-content: space-between;
+      gap: 0.5em;
     }
     .todaydetails {
       display: flex;
@@ -499,16 +499,18 @@ main {
     height: 90vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1em;
+    gap: 0.6em;
     display: grid;
     .card {
-      font-size: 7.5px;
+      font-size: 9.5px;
+      height: 100%;
     }
   }
   main section:nth-of-type(2) {
+    height: 200vh;
     .todaydetails {
       gap: 4em;
-      width: 100%;
+
       .details {
         display: flex;
         flex-direction: column;
@@ -518,4 +520,15 @@ main {
     }
   }
 }
-
+@media (max-width: 350px) {
+  body {
+    font-size: 6px;
+  }
+  main section:nth-of-type(2) .weather-5days {
+    gap: 1em;
+    .card {
+      font-size: 8px;
+      height: 100%;
+    }
+  }
+}
